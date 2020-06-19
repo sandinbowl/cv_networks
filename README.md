@@ -8,7 +8,15 @@
 
 #### Contents
 
-	1. AlexNet, ZFNet (也叫MatNet), VGGNet, NIN, GoogleNet (Inception), Highway Network, ResNet, DenseNet,SE-Net（Squeeze and Excitation Net）
+	1. AlexNet, 
+	2. ZFNet (MatNet), 
+	3. VGGNet,
+	4. NIN, 
+	5. GoogleNet (Inception), 
+	6. Highway Network, 
+	7. ResNet, 
+	8. DenseNet, 
+	9. SE-Net（Squeeze and Excitation Net）
 
 #### User guide
 
