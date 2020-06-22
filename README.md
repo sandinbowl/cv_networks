@@ -1,9 +1,11 @@
 # cv_networks
 
 #### Introduction
-	Try to run different computer vision neural networks
+
+	Try to use different computer vision neural networks and make some comparisons.
 
 #### Programming Language
+
 	python
 
 #### Contents
