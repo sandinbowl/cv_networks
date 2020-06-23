@@ -10,7 +10,7 @@
 
 #### Contents
 
-	1. AlexNet, 
+	1. AlexNet, LeNet
 	2. ZFNet (MatNet), 
 	3. VGGNet,
 	4. NIN, 
