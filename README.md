@@ -10,7 +10,7 @@
 
 #### Contents
 
-	1. AlexNet, LeNet
+	1. LeNet, AlexNet
 	2. ZFNet (MatNet), 
 	3. VGGNet,
 	4. NIN, 
@@ -20,7 +20,11 @@
 	8. DenseNet, 
 	9. SE-Net（Squeeze and Excitation Net）
 
-#### User guide
+#### User Guide
 
-	1.  略
-	2.  略
+	1.  Coming soon!
+	2.  None
+	
+#### Comment
+
+	Everyday without dancing, is to live up to life.
