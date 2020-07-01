@@ -2,7 +2,7 @@
 
 #### Introduction
 
-	Try to use different computer vision neural networks and make some comparisons.
+	Try different computer vision neural networks and make some comparisons.
 
 #### Programming Language
 
