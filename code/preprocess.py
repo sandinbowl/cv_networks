@@ -22,7 +22,7 @@ def main():
         print(d[ele][:10])
         print(len(d[ele]))
         print(type(d[ele]))
-        # exit()
+    exit()
 
 
 def build_training_set():
