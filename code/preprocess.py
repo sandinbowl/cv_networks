@@ -10,9 +10,8 @@ def load(file):
     return d
 
 
-def main():
+def trial():
     path = pre + 'data_batch_'
-
     for i in range(1, 6):
         whole = path + str(i)
         d = load(whole)
@@ -26,6 +25,7 @@ def main():
 
 
 def build_training_set():
+    print('Load data.')
     path = pre + 'data_batch_'
     dataset, label = [], []
     for i in range(1, 6):
@@ -36,8 +36,10 @@ def build_training_set():
     dataset = np.array(dataset)
     label = np.array(label)
     print(dataset.shape, label.shape)
+    print('Loading success.')
 
     return dataset, label
+
 
 if __name__ == '__main__':
     build_training_set()
