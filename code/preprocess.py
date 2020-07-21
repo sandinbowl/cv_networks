@@ -24,7 +24,7 @@ def trial():
     exit()
 
 
-def build_training_set():
+def build_dataset():
     print('Load data.')
     path = pre + 'data_batch_'
     dataset, label = [], []
@@ -41,5 +41,32 @@ def build_training_set():
     return dataset, label
 
 
+def split_ds(dataset, label):
+    from sklearn.model_selection import train_test_split
+    x_train, x_test, y_train, y_test = train_test_split(dataset, label, test_size=0.2, random_state=0, shuffle=True)
+    print(x_train.shape, x_test.shape)
+    return x_train, x_test, y_train, y_test
+
+
+def visual_one_pic(pic):
+    lst = [[[] for _ in range(32)] for _ in range(32)]
+    idx = 0
+    for c in range(3):
+        for i in range(32):
+            for j in range(32):
+                lst[i][j].append(pic[idx])
+                idx += 1
+    new = np.array(lst)
+    import cv2 as cv
+    new = cv.cvtColor(new, cv.COLOR_RGB2BGR)
+    new = cv.resize(new, (256, 256))
+    cv.imshow('pic', new)
+    cv.waitKey(0)
+
+
 if __name__ == '__main__':
-    build_training_set()
+    dataset, label = build_dataset()
+    visual_one_pic(dataset[0])
+    exit()
+
+    x_train, x_test, y_train, y_test = split_ds(dataset, label)
