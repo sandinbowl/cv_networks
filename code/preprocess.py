@@ -64,9 +64,26 @@ def visual_one_pic(pic):
     cv.waitKey(0)
 
 
+def dim_convert_1to3(data, show=False):
+    l1 = data[:, :1024].reshape((data.shape[0], 32, 32, 1))
+    l2 = data[:, 1024:2048].reshape((data.shape[0], 32, 32, 1))
+    l3 = data[:, 2048:].reshape((data.shape[0], 32, 32, 1))
+    result = np.concatenate((l1, l2, l3), axis=3)
+    if not show:
+        return result
+    new = result[0]
+    import cv2 as cv
+    new = cv.cvtColor(new, cv.COLOR_RGB2BGR)
+    new = cv.resize(new, (256, 256))
+    cv.imshow('pic', new)
+    cv.waitKey(0)
+
+
 if __name__ == '__main__':
     dataset, label = build_dataset()
-    visual_one_pic(dataset[0])
+    # visual_one_pic(dataset[0])
+    # exit()
+    dim_convert_1to3(dataset, show=True)
     exit()
 
     x_train, x_test, y_train, y_test = split_ds(dataset, label)
