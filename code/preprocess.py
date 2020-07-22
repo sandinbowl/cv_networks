@@ -30,14 +30,24 @@ def build_dataset():
     print('Load data.')
     path = pre + 'data_batch_'
     dataset, label = [], []
+    # bl = []
     for i in range(1, 6):
         whole = path + str(i)
         dict = load(whole)
+        # print(dict.keys())      # dict_keys([b'batch_label', b'labels', b'data', b'filenames'])
         label.extend(list(dict[b'labels']))
         dataset.extend(list(dict[b'data']))
+        # bl.extend(list(dict[b'batch_label']))
     dataset = np.array(dataset)
     label = np.array(label)
     print(dataset.shape, label.shape)
+    # b_label = np.array(bl)
+    # print(b_label.shape)
+    # bl_set = set()
+    # for i in b_label:
+    #     bl_set.add(i)
+    # print(bl_set)
+    # exit()
     print('Loading success.')
 
     return dataset, label
@@ -85,6 +95,11 @@ if __name__ == '__main__':
     dataset, label = build_dataset()
     # visual_one_pic(dataset[0])
     # exit()
+    my_set = set()
+    for i in label:
+        my_set.add(i)
+    print(my_set)
+    exit()
     dim_convert_1to3(dataset, show=True)
     exit()
 
