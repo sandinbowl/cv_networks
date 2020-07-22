@@ -62,8 +62,8 @@ def train_helper(model, lr=0.5, bs=64, max_iter=100, save_name='lenet'):
             loss.backward()
             opt.step()
             opt.zero_grad()
-        PATH = path + '/m_' + save_name + str(epoch) + '.pt'
-        torch.save(model.state_dict(), PATH)
+        # PATH = path + '/m_' + save_name + str(epoch) + '.pt'
+        # torch.save(model.state_dict(), PATH)
         model.eval()
         with torch.no_grad():
             valid_loss = sum(loss_function(model(xb), yb) for xb, yb in valid_dl) / len(valid_dl)

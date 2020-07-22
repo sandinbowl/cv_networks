@@ -23,7 +23,7 @@ class LeNet(nn.Module):
         temp = F.relu(self.c5(temp))            # C5层 卷积层
         temp = F.relu(self.f6(temp))            # F6层 全连接层
         out = self.output_layer(temp)           # output层 全连接层
-        return out
+        return F.softmax(out)
 
 
 def lenet_train():
