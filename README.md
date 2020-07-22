@@ -22,8 +22,8 @@
 
 #### User Guide
 
-	1.  Coming soon!
-	2.  None
+	1.  Decision Board: https://docs.qq.com/doc/DTnlicHFFUVlyaFBL
+	2.  All the codes are located in directory ./code
 	
 #### Comment
 
